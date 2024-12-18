@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receptionist Page</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.20.10/css/uikit.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to left, #ff7e5f, #feb47b);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            flex-direction: column;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        header {
+            background-color: #333;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            animation: slideDown 0.5s ease-in-out;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin: 0;
+            color: #ff7e5f;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #444;
+            padding: 10px 0;
+            width: 100%;
+            animation: fadeInNav 1.5s ease-in-out;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 14px 20px;
+            margin: 0 10px;
+            font-size: 18px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #ff7e5f;
+            color: white;
+            transform: scale(1.1);
+        }
+
+        .slideshow-container {
+            position: relative;
+            max-width: 100%;
+            margin: 20px 0;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .slide {
+            display: none;
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideDown {
+            0% {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInNav {
+            0% {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .btn-container {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            animation: bounceInUp 1s ease-out;
+        }
+
+        .btn {
+            padding: 12px 24px;
+            font-size: 18px;
+            background-color: #ff7e5f;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            margin: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, background-color 0.3s;
+        }
+
+        .btn:hover {
+            transform: scale(1.1);
+            background-color: #feb47b;
+        }
+
+        .btn i {
+            margin-right: 8px;
+        }
+
+        @keyframes bounceInUp {
+            0% {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .container {
+            text-align: center;
+            margin-top: 20px;
+            animation: fadeInText 2s ease-in-out;
+        }
+
+        .container h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            color: #ff7e5f;
+        }
+
+        .container p {
+            font-size: 1.2em;
+            color: #f3dad9;
+        }
+
+        @keyframes fadeInText {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Receptionist Dashboard</h1>
+    </header>
+
+    <nav>
+        <a href="#about-us">About Us</a>
+        <a href="#contact-us">Contact Us</a>
+    </nav>
+
+    <div class="slideshow-container">
+        <div class="slide active">
+            <img src="https://via.placeholder.com/1000x400/ff7e5f/ffffff?text=Welcome+to+ABC+Hospital" alt="Slide 1" style="width: 100%; height: auto;">
+        </div>
+        <div class="slide">
+            <img src="https://via.placeholder.com/1000x400/2575fc/ffffff?text=Compassionate+Care+for+All" alt="Slide 2" style="width: 100%; height: auto;">
+        </div>
+        <div class="slide">
+            <img src="https://via.placeholder.com/1000x400/6a11cb/ffffff?text=Advanced+Medical+Services" alt="Slide 3" style="width: 100%; height: auto;">
+        </div>
+    </div>
+
+    <div class="container">
+        <h1 style="color: bisque;">Welcome, Receptionist!</h1>
+        <p>Manage patient appointments and details efficiently.</p>
+    </div>
+
+    <div class="btn-container">
+        <a href="view_doctors.php" class="btn">
+            <i class="fas fa-user-md"></i> Doctor
+        </a>
+        <a href="patient_details.php" class="btn">
+            <i class="fas fa-user-injured"></i> Patient
+        </a>
+    </div>
+
+    <script>
+        let slideIndex = 0;
+        const slides = document.getElementsByClassName("slide");
+
+        function showSlides() {
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].classList.remove("active");
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1; }
+            slides[slideIndex - 1].classList.add("active");
+            setTimeout(showSlides, 3000); /
+        }
+
+        showSlides();
+    </script>
+
+</body>
+</html>

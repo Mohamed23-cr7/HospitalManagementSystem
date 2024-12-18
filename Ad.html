@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            font-family: 'Arial', sans-serif;
+            color: white;
+            overflow-x: hidden;
+        }
+        .login-container {
+            margin-top: 100px;
+            max-width: 400px;
+            background: white;
+            color: #333;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+            animation: fadeInUp 1.5s ease-out;
+        }
+        .login-container h2 {
+            text-align: center;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .login-container form .form-control {
+            border-radius: 25px;
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+        .login-container form .btn-primary {
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+        }
+        .login-container form .btn-primary:hover {
+            background: linear-gradient(to left, #6a11cb, #2575fc);
+            transform: scale(1.05);
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container d-flex justify-content-center align-items-center vh-100">
+        <div class="login-container">
+            <h2>Admin Login</h2>
+            <form action="details.php" method="POST">
+                <div class="form-group">
+                    <label for="username">Username:</label>
+                    <input type="text" name="username" id="username" class="form-control" placeholder="Enter your username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" name="password" id="password" class="form-control" placeholder="Enter your password" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

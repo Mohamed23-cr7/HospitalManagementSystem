@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - ABC Virtual Hospital</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            color: white;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        nav {
+            background-color: #333;
+            padding: 10px 20px;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ff6347;
+        }
+
+        h2 {
+            font-weight: bold;
+            text-align: center;
+            margin-top: 50px;
+            color: #fff;
+        }
+
+        .animated-section {
+            animation: fadeInUp 1.5s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .services {
+            display: flex;
+            justify-content: space-around;
+            padding: 50px 20px;
+            flex-wrap: wrap;
+        }
+
+        .service-card {
+            background: #fff;
+            color: #333;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            width: 30%;
+            margin-bottom: 30px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .service-card img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+
+        .service-card h4 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .team-section {
+            background-color: #333;
+            padding: 50px 20px;
+        }
+
+        .team-section .team-member {
+            text-align: center;
+            margin: 20px;
+        }
+
+        .team-section img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .team-section .team-member h4 {
+            margin-top: 10px;
+            color: white;
+            font-size: 18px;
+        }
+
+        .contact-section {
+            background: #2575fc;
+            padding: 50px 20px;
+            color: white;
+        }
+
+        .contact-section input, .contact-section textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+
+        .contact-section button {
+            background-color: #ff6347;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 18px;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+
+        .contact-section button:hover {
+            background-color: #ff4500;
+            transform: scale(1.05);
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer a {
+            color: #ff6347;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#">ABC VIRTUAL</a>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="user.html">Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div id="about" class="container animated-section">
+        <h2>About Us</h2>
+        <p>Welcome to ABC Virtual Hospital, where we combine innovative healthcare technology with compassionate care to provide excellent medical services. We strive to bring world-class healthcare services to your doorstep, ensuring every patient is treated with utmost care and respect.</p>
+    </div>
+
+    <div id="services" class="services">
+        <div class="service-card">
+            <img src="https://via.placeholder.com/100" alt="Cardiology">
+            <h4>Cardiology</h4>
+            <p>We offer comprehensive cardiology services to ensure the health of your heart. From diagnostic testing to advanced treatments, we have you covered.</p>
+        </div>
+        <div class="service-card">
+            <img src="https://via.placeholder.com/100" alt="Compassionate Care">
+            <h4>Compassionate Care</h4>
+            <p>Our healthcare team provides compassionate care, making sure you receive not only medical attention but also emotional support during your healing process.</p>
+        </div>
+        <div class="service-card">
+            <img src="https://via.placeholder.com/100" alt="Medical Technology">
+            <h4>Advanced Medical Technology</h4>
+            <p>We utilize cutting-edge medical technology to provide accurate diagnostics and effective treatments, improving patient outcomes and care efficiency.</p>
+        </div>
+    </div>
+
+    <div id="team" class="team-section">
+        <h2>Meet Our Team</h2>
+        <div class="d-flex justify-content-center">
+            <div class="team-member">
+                <img src="https://via.placeholder.com/150" alt="Dr. John Doe">
+                <h4>Dr. John Doe</h4>
+                <p>Cardiologist</p>
+            </div>
+            <div class="team-member">
+                <img src="https://via.placeholder.com/150" alt="Dr. Jane Smith">
+                <h4>Dr. Jane Smith</h4>
+                <p>Family Medicine</p>
+            </div>
+            <div class="team-member">
+                <img src="https://via.placeholder.com/150" alt="Dr. James Brown">
+                <h4>Dr. James Brown</h4>
+                <p>Surgeon</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="contact" class="contact-section">
+        <h2>Contact Us</h2>
+        <form>
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <footer>
+        <img src="https://via.placeholder.com/100" alt="Logo" class="mb-2">
+        <p>ABC Virtual Hospital</p>
+        <p>Location: 123 Main Street, ABC City, XYZ Country</p>
+        <p>Phone: +123 456 7890 | Email: info@abcvirtualhospital.com</p>
+        <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
